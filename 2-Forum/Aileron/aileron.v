@@ -16,11 +16,15 @@ endmodule
 
 module Main;
 
+	//Acho que como ang começa em -7. Esse é um jeito de fazer os numero negativos
 	reg signed [3:0] ang = -7;
 	wire v1e, v2e, v1d, v2d;
 
+	//Não entendo
 	Aileron aileron (ang, v1e, v2e, v1d, v2d);
 
+	//Como dar um ++ passa por dos os valor da tabela verdade
+	//É pq na verdade dar um ++ aumenta um decimal e dar ++ até 15 em um reg de 4 bit vc esta varia todas as possiveis alternativas da tabela verdade de conversão de decimal para binario 
 	always begin
 		#1 ang++;
 	end

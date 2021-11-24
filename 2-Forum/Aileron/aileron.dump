@@ -1,0 +1,42 @@
+$date
+	Wed Nov 24 10:02:53 2021
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module Main $end
+$var wire 1 ! v1e $end
+$upscope $end
+$scope module Main $end
+$var wire 1 " v2e $end
+$upscope $end
+$scope module Main $end
+$var wire 1 # v1d $end
+$upscope $end
+$scope module Main $end
+$var wire 1 $ v2d $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0$
+0#
+1"
+1!
+$end
+#4
+0"
+#7
+0!
+x"
+x$
+#8
+0"
+1#
+0$
+#11
+1$
+#15
