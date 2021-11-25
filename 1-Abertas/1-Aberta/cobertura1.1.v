@@ -1,39 +1,43 @@
 
-module cobertura(ang, v1e, v2e, v1d, v2d);
+module cobertura(L, U, Fd, Fe, A, F);
 
     input L, U, Fd, Fe;
     output A, F;
 
     //De acordo com a tabela verdade é possivel encontrar as formulas para cara valvula
-    assign A = ~L&~U&~Fd;
-    assign F = (U&~Fe) | (L&~Fe);
+    assign A = ~L & ~U & ~Fd;
+    assign F = (U & ~Fe) | (L & ~Fe);
+
 endmodule
 
 module cobertura_tb;
+    reg L, U, Fd, Fe;
+    wire A, F;
+	integer i;
 
-	reg signed [0:3] ang = -7;
-	wire v1e, v2e, v1d, v2d;
-    integer i;
+	cobertura cobertura(L, U, Fd, Fe, A, F);
 
-	cobertura cobertura(ang, v1e, v2e, v1d, v2d);
-
-	always begin
-		#15 $stop;
+   initial begin
+	L = 0;
+	U = 0;
+	Fd = 0;
+	Fe = 0;
 	end
 
-	always begin
-		for (i = 0; i < 8; i = i + 1) begin
-            #1 ang = ang + 1'b1;
-        end
-	end
+   always begin  
+		#20 {L, U, Fd, Fe} = {L, U, Fd, Fe} + 1;
+    end
 
+	always begin
+		#320 $stop;
+	end
 
 	initial begin
-		$dumpfile("cobertura_tb.vcd");
+		$dumpfile("cobertura1.1.vcd");
 		$dumpvars(0, cobertura_tb);
 
-		$display("ang \t v1e \t v2e \t v1d \t v2d");
-		$monitor("%d \t %b \t %b \t %b \t %b", ang, v1e, v2e, v1d, v2d);
+		$display("L \t U \t Fd \t Fe \t A \t F");
+		$monitor("%d \t %b \t %b \t %b \t %b \t %b", L, U, Fd, Fe, A, F);
 	end
 
 endmodule

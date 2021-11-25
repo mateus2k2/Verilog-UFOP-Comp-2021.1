@@ -1,0 +1,91 @@
+$date
+	Thu Nov 25 13:32:48 2021
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module cobertura_tb $end
+$var wire 1 ! F $end
+$var wire 1 " A $end
+$var reg 1 # Fd $end
+$var reg 1 $ Fe $end
+$var reg 1 % L $end
+$var reg 1 & U $end
+$scope module cobertura $end
+$var wire 1 " A $end
+$var wire 1 ! F $end
+$var wire 1 # Fd $end
+$var wire 1 $ Fe $end
+$var wire 1 % L $end
+$var wire 1 & U $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0&
+0%
+0$
+0#
+1"
+0!
+$end
+#20
+1$
+#40
+0"
+1#
+0$
+#60
+1$
+#80
+1!
+0"
+1&
+0#
+0$
+#100
+0!
+1$
+#120
+1!
+1#
+0$
+#140
+0!
+1$
+#160
+1!
+1%
+0&
+0#
+0$
+#180
+0!
+1$
+#200
+1!
+1#
+0$
+#220
+0!
+1$
+#240
+1!
+1&
+0#
+0$
+#260
+0!
+1$
+#280
+1!
+1#
+0$
+#300
+0!
+1$
+#320
